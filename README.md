@@ -1,6 +1,7 @@
 Cluster-based Opponent Modelling and its Impact on Counterfactual Regret Minimisation Approaches to Imperfect Information Games
 
 Introduction:
+
 This software makes up the entirety of the work on this project. It is split into two main parts: the Counterfactual Regret Minimisation section (CFR) and the K-models clustering section. The file called CFR makes up all of the code for the CFR algorithm and was used to output all the CFR trained models. The rest of the code files are all related to the function of the K-models clustering algorithm which produced supervised learning models from each cluster to then be used in the CFR algorithm.
 
 Contextual Overview:
@@ -18,14 +19,19 @@ Installation Instructions:
 Prerequisites
 
 •	Python 3.8 or later
+
 •	pip (Python package manager)
 
 Dependencies
 
 Install all required packages such as:
+
 • numpy	- Numerical arrays and linear algebra
+
 • scikit-learn	- MLPClassifier and LabelEncoder for supervised models
+
 • matplotlib - Cluster evolution plots
+
 • treys -	Fast poker hand evaluation for EHS Squared calculation in plotting.py
 
 Environment Setup
