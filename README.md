@@ -14,9 +14,11 @@ The data flows through the system in the following order:
 7.	CFR.py — Each of the cluster saved models are then loaded one at a time against the CFR algorithm which then produces CFR models that are tailored to the clusters found by the k models algorithm.
 
 Installation Instructions:
+
 Prerequisites
 •	Python 3.8 or later
 •	pip (Python package manager)
+
 Dependencies
 Install all required packages such as:
 • numpy	- Numerical arrays and linear algebra
@@ -42,5 +44,6 @@ Most of the known issues and future improvements are discussed in depth in the f
 •	Performance optimisation — The time take for the program to finish was a major issue across both the K-models clustering and CFR sections. Some speed ups could come from simple fixes such as creating array lookup tables in advance for some necessary sections. Other improvements may take the form of trying to parallelise bits of code that can be done in parallel. These improvements could also target memory issues as while my system always had enough RAM to run these programs, they were still incredibly RAM intensive. Without the extra RAM purchased through the university it would have been a struggle to run the files as they exist now.
 
 Third Party/AI Involvement:
-Through this project, Claude has been used to help format/structure and debug code so has played a role in all of the files created. It is also responsible for the direct generation of any save/checkpointing functions along with the displaying of statistics such as the entirety of plotting.py among with functions in the other files. It is also responsible for the run_clustering.py file as this is just a file used to run all the other k models clustering files and track output.
-Anthropic Claude (2026).’Formatting and debugging of code along with the generation of statistics/display across the code’. Claude Opus 4. [AI assistant]. Available at: https://claude.ai/ (Accessed: 1 May 2026).
+Through this project, Claude [1] has been used to help format/structure and debug code so has played a role in all of the files created. It is also responsible for the direct generation of any save/checkpointing functions along with the displaying of statistics such as the entirety of plotting.py among with functions in the other files. It is also responsible for the run_clustering.py file as this is just a file used to run all the other k models clustering files and track output.
+
+[1] Anthropic Claude (2026).’Formatting and debugging of code along with the generation of statistics/display across the code’. Claude Opus 4. [AI assistant]. Available at: https://claude.ai/ (Accessed: 1 May 2026).
