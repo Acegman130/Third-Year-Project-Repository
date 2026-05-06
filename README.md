@@ -16,10 +16,12 @@ The data flows through the system in the following order:
 Installation Instructions:
 
 Prerequisites
+
 •	Python 3.8 or later
 •	pip (Python package manager)
 
 Dependencies
+
 Install all required packages such as:
 • numpy	- Numerical arrays and linear algebra
 • scikit-learn	- MLPClassifier and LabelEncoder for supervised models
@@ -31,19 +33,25 @@ Environment Setup
 2.	Place the .phhs hand history files from the Annual Computer Poker Competition dataset in the project folder
 
 How to Run the Software:
-Stage 1: K-Models Clustering
+ 
+Stage 1: K-Models Clustering -
 Change the variables in the configuration section of the run_clustering.py file and the run that file.
-Stage 2: CFR Counter-Strategy Training
+
+Stage 2: CFR Counter-Strategy Training -
 Make sure the model you want to use as the opponent for the CFR is in your project folder and then edit the configuration settings as desired making sure the opponent filename is the same as the one you want. Then run CFR.py
 
 Technical Details:
+
 Most of the technical details necessary to understand the code are mentioned in the paper itself. The only one that was not is the Hand Ranker function. This function works is that it assigns a score to different hand categories based on its relative strength inside that category e.g. pair of aces will get 2900 while a three of a kind aces will get 4900. Each hand category gets a 1000 score range with the better hands in that category getting placed higher in the range.
 
 Known Issues and Future Improvements:
+
 Most of the known issues and future improvements are discussed in depth in the future work section of the paper however there are some that specifically related to the code which I will discuss:
+
 •	Performance optimisation — The time take for the program to finish was a major issue across both the K-models clustering and CFR sections. Some speed ups could come from simple fixes such as creating array lookup tables in advance for some necessary sections. Other improvements may take the form of trying to parallelise bits of code that can be done in parallel. These improvements could also target memory issues as while my system always had enough RAM to run these programs, they were still incredibly RAM intensive. Without the extra RAM purchased through the university it would have been a struggle to run the files as they exist now.
 
 Third Party/AI Involvement:
+
 Through this project, Claude [1] has been used to help format/structure and debug code so has played a role in all of the files created. It is also responsible for the direct generation of any save/checkpointing functions along with the displaying of statistics such as the entirety of plotting.py among with functions in the other files. It is also responsible for the run_clustering.py file as this is just a file used to run all the other k models clustering files and track output.
 
 [1] Anthropic Claude (2026).’Formatting and debugging of code along with the generation of statistics/display across the code’. Claude Opus 4. [AI assistant]. Available at: https://claude.ai/ (Accessed: 1 May 2026).
