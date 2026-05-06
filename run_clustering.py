@@ -41,7 +41,7 @@ def main():
         maxhands=MAX_HANDS,
         maxiterations=MAX_ITERATIONS,
         output=OUTPUT_DIR,
-        random=42,
+        random_seed=42,
     )
     handsequences = result['handsequences']
     print(f"\n✓ Ready to cluster {len(handsequences)} hand sequences")
