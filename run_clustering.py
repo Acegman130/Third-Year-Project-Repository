@@ -43,8 +43,8 @@ def main():
         output=OUTPUT_DIR,
         random=42,
     )
-    hand_sequences = result['hand_sequences']
-    print(f"\n✓ Ready to cluster {len(hand_sequences)} hand sequences")
+    handsequences = result['handsequences']
+    print(f"\n✓ Ready to cluster {len(handsequences)} hand sequences")
 
 
     print("\n" + "=" * 80)
