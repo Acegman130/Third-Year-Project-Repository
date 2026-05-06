@@ -46,11 +46,11 @@ def Completebuild(folder: str,
                           maxhands: Optional[int] = None,
                           maxiterations: int = 20,
                           output: str = './poker_analysis',
-                          random: int = 42):
+                          random_seed: int = 42):
 
 
-    random.seed(random)
-    np.random.seed(random)
+    random.seed(random_seed)
+    np.random.seed(random_seed)
 
     print("=" * 80)
     print("POKER PLAYING STYLE CLUSTERING - COMPLETE PIPELINE")
